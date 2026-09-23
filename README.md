@@ -10,7 +10,7 @@
 
 This repository contains a comprehensive, leak-free, scientifically controlled deep learning study evaluating four distinct neural network architectures for multi-class brain tumour classification from magnetic resonance imaging (MRI) scans:
 
-1. **Custom CNN (from scratch):** 4-block convolutional network ($32 \to 64 \to 128 \to 256$), Batch Normalization, MaxPooling, Dropout(0.40), GAP, and Dense layers (1.44M parameters).
+1. **Custom CNN (from scratch):** 4-block convolutional network (32 → 64 → 128 → 256), MaxPooling, Dense(256), Dropout, and 4-class softmax.
 2. **VGG16 (Transfer Learning):** Deep sequential convolutional feature extractor with Global Average Pooling and a dense classifier head (14.98M parameters).
 3. **ResNet50 (Transfer Learning):** Deep residual network utilizing bottleneck residual blocks and identity shortcut connections to mitigate vanishing gradients (24.11M parameters).
 4. **DenseNet121 (Transfer Learning):** Densely connected convolutional network featuring dense feature concatenation blocks and transition layers for maximal feature reuse (7.30M parameters).
@@ -25,19 +25,7 @@ This repository contains a comprehensive, leak-free, scientifically controlled d
 
 ## 2. Master Comparison Results
 
-All four models were trained and evaluated on identical frozen splits under standardized experimental conditions (Seed = 42, Max Epochs = 20, EarlyStopping patience = 4 monitoring `val_loss`, Adam optimizer, batch size = 16, standardized inference timing with 5 warmup and 50 timed passes on GPU):
-
-| Model | Paradigm | Parameters | Model Size | Val Accuracy | Test Accuracy | Macro F1 | ROC-AUC | Latency (ms) | Throughput (ips) |
-|---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **DenseNet121** | Transfer Learning | 7,300,932 | 29.5 MB | **97.89%** | **97.25%** | **0.9720** | **0.9984** | 2.88 ms | 347.2 ips |
-| **ResNet50** | Transfer Learning | 24,113,284 | 92.4 MB | 97.61% | 96.87% | 0.9680 | 0.9972 | 3.82 ms | 261.8 ips |
-| **VGG16** | Transfer Learning | 14,978,116 | 57.1 MB | 97.06% | 96.11% | 0.9601 | 0.9951 | 2.45 ms | 408.2 ips |
-| **Custom CNN** | From Scratch | **1,438,276** | **16.5 MB** | 96.60% | 95.35% | 0.9523 | 0.9932 | **0.93 ms** | **1,075.7 ips** |
-
-*Master table exported to:* [`results/comparison/MASTER_COMPARISON_TABLE.csv`](file:///c:/Users/ramzy/Desktop/brain_tumour_model_comparison/results/comparison/MASTER_COMPARISON_TABLE.csv)  
-*Comprehensive academic report:* [`results/comparison/FINAL_SYNTHESIS_REPORT.md`](file:///c:/Users/ramzy/Desktop/brain_tumour_model_comparison/results/comparison/FINAL_SYNTHESIS_REPORT.md)
-
----
+Final four-model results are intentionally **not hard-coded** in the repository. Run `01_custom_cnn.ipynb`, `02_vgg16.ipynb`, `03_resnet50.ipynb`, and `04_densenet121.ipynb` to generate measured comparison rows, then run `05_final_comparison.ipynb` to create the master table and plots.
 
 ## 3. Dataset & Frozen Split Specifications
 
@@ -72,10 +60,11 @@ brain-tumour-model-comparison/
 ├── models/
 │   ├── README.md                              # Model storage documentation
 │   ├── cnn/custom_cnn_final.keras             # Trained Custom CNN binary
-│   ├── vgg16/vgg16_final.keras                # Trained VGG16 binary
-│   ├── resnet50/resnet50_final.keras          # Trained ResNet50 binary
-│   └── densenet121/densenet121_final.keras    # Trained DenseNet121 binary
+│   ├── vgg16/vgg16_final.keras                # Generated after VGG16 notebook completes
+│   ├── resnet50/resnet50_final.keras          # Generated after ResNet50 notebook completes
+│   └── densenet121/densenet121_final.keras    # Generated after DenseNet121 notebook completes
 ├── notebooks/
+│   ├── 00_data_preparation.ipynb
 │   ├── 01_custom_cnn.ipynb                    # Member 1: Custom CNN from scratch
 │   ├── 02_vgg16.ipynb                         # Member 2: VGG16 Transfer Learning
 │   ├── 03_resnet50.ipynb                      # Member 3: ResNet50 Transfer Learning
@@ -88,9 +77,9 @@ brain-tumour-model-comparison/
 │   ├── resnet50/                              # Member 3 metrics, curves, MODEL_CARD.md
 │   ├── densenet121/                           # Member 4 metrics, curves, MODEL_CARD.md
 │   └── comparison/
-│       ├── MASTER_COMPARISON_TABLE.csv        # Consolidated 4-architecture metrics
-│       ├── FINAL_SYNTHESIS_REPORT.md          # 30% rubric critical analysis & synthesis
-│       └── plots/                             # Comparative visualizations
+│       ├── MASTER_COMPARISON_TABLE.csv        # Generated after all four measured rows exist
+│       ├── FINAL_SYNTHESIS_REPORT.md          # Generated from measured rows only
+│       └── plots/                             # Generated comparative visualizations
 └── splits/
     ├── train.csv                              # Frozen training split manifest (4,353 images)
     ├── val.csv                                # Frozen validation split manifest (1,089 images)
@@ -120,11 +109,13 @@ brain-tumour-model-comparison/
 
 ---
 
-## 6. Key Scientific Findings & Limitations
+## 6. Scientific Interpretation & Limitations
 
-1. **Empirical Value of Transfer Learning:** Pretrained natural-image representations on ImageNet transferred effectively to axial MRI, improving accuracy from 95.35% (scratch CNN) to 97.25% (DenseNet121) and reducing false negatives.
-2. **Architecture Efficiency Frontier:** DenseNet121 outperformed ResNet50 in predictive accuracy (97.25% vs 96.87%) with **less than one-third of the parameters** (7.30M vs 24.11M) due to dense feature reuse.
-3. **Preserved Study Limitations:**
-   - *Patient-level independence:* Reliable patient identifiers were not published with the Kaggle dataset; patient-level independence between splits cannot be proven.
-   - *Single-plane 2D slices:* 2D axial slice classification excludes multi-planar 3D volumetric context.
-   - *Academic artifact:* High benchmark accuracy does not imply clinical readiness across unseen hospital scanners, magnet field strengths, or acquisition protocols.
+Do not state comparative findings until all four model notebooks have been executed and `05_final_comparison.ipynb` has generated the measured master table. The repository intentionally avoids pre-populating transfer-learning performance values before execution.
+
+Preserved limitations:
+
+1. **Pretraining asymmetry:** the Custom CNN is trained from scratch, while VGG16, ResNet50 and DenseNet121 use ImageNet weights. This is a practical training-approach comparison, not a perfectly isolated architecture-only experiment.
+2. **Patient-level independence:** reliable patient identifiers are not available, so patient-level separation cannot be independently verified.
+3. **2D image limitation:** the task uses individual 2D MRI images and does not model full 3D volumetric context.
+4. **Academic artifact:** benchmark performance does not establish clinical readiness or cross-hospital generalization.
