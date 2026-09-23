@@ -1,0 +1,11 @@
+{
+    "method": "model-only repeated batch forward pass",
+    "batch_size": 16,
+    "warmup_runs": 5,
+    "timed_runs": 50,
+    "total_timed_images": 800,
+    "elapsed_seconds": 0.743703172000096,
+    "milliseconds_per_image": 0.9296289650001199,
+    "images_per_second": 1075.6979802150108,
+    "gpu": "Tesla T4"
+}

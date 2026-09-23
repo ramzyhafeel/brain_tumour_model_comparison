@@ -1,0 +1,55 @@
+{
+    "member": 1,
+    "phase": 2,
+    "model_name": "CNN_A_Baseline",
+    "purpose": "1-epoch implementation smoke test only",
+    "dataset_handle": "masoudnickparvar/brain-tumor-mri-dataset/versions/1",
+    "seed": 42,
+    "train_count": 4353,
+    "validation_count": 1089,
+    "test_count": 1311,
+    "test_used_for_training_or_selection": false,
+    "image_size": [
+        224,
+        224,
+        3
+    ],
+    "batch_size": 16,
+    "augmentation": {
+        "rotation_factor": 0.03,
+        "zoom": 0.08,
+        "translation": 0.05
+    },
+    "normalization": "Rescaling(1./255)",
+    "conv_filters": [
+        32,
+        64,
+        128,
+        256
+    ],
+    "kernel_size": [
+        3,
+        3
+    ],
+    "pool_sizes": [
+        2,
+        2,
+        2,
+        5
+    ],
+    "dense_units": 256,
+    "dropout": 0.3,
+    "output_units": 4,
+    "output_activation": "softmax",
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "loss": "SparseCategoricalCrossentropy",
+    "smoke_epochs": 1,
+    "total_parameters": 1438276,
+    "trainable_parameters": 1438276,
+    "initial_val_loss": 1.3850983381271362,
+    "initial_val_accuracy": 0.25619834661483765,
+    "post_smoke_val_loss": 0.8737829923629761,
+    "post_smoke_val_accuracy": 0.647382915019989,
+    "smoke_training_seconds": 23.342840043999786
+}

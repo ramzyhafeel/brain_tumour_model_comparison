@@ -1,0 +1,2 @@
+model,experiment_id,image_size,batch_size,optimizer,learning_rate,max_epochs,actual_epochs,best_epoch,best_val_accuracy,test_accuracy,macro_precision,macro_recall,macro_f1,roc_auc_macro,training_time_seconds,inference_time,inference_time_unit,total_parameters,trainable_parameters,model_size_mb,seed,gpu,dataset_version,test_samples,patient_level_independence_verified
+ResNet50,ResNet50_C,224x224x3,16,Adam,1e-05,20,19,15,0.9761,0.9687,0.9682,0.9679,0.968,0.9972,489.12,3.82,milliseconds_per_image,24113284,4983556,92.42,42,Tesla T4,1,1311,False

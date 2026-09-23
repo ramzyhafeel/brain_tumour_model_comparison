@@ -1,0 +1,35 @@
+{
+    "project_title": "Comparative Analysis of Deep Learning Architectures for Multi-Class Brain Tumour MRI Classification",
+    "seed": 42,
+    "image_height": 224,
+    "image_width": 224,
+    "channels": 3,
+    "classes": [
+        "glioma",
+        "meningioma",
+        "notumor",
+        "pituitary"
+    ],
+    "class_to_index": {
+        "glioma": 0,
+        "meningioma": 1,
+        "notumor": 2,
+        "pituitary": 3
+    },
+    "batch_size": 16,
+    "maximum_epochs": 20,
+    "loss_function": "sparse_categorical_crossentropy",
+    "output_activation": "softmax",
+    "early_stopping_monitor": "val_loss",
+    "early_stopping_patience": 4,
+    "restore_best_weights": true,
+    "validation_fraction_from_original_training": 0.2,
+    "test_policy": "Original Kaggle Testing directory reserved for final evaluation only",
+    "validation_policy": "Validation split created only from original Kaggle Training directory",
+    "prediction_shuffle": false,
+    "augmentation_policy": "Identical mild augmentation policy will be applied to training data only.",
+    "cnn_preprocessing": "Rescaling(1./255)",
+    "vgg16_preprocessing": "keras.applications.vgg16.preprocess_input",
+    "resnet50_preprocessing": "keras.applications.resnet50.preprocess_input",
+    "densenet121_preprocessing": "keras.applications.densenet.preprocess_input"
+}

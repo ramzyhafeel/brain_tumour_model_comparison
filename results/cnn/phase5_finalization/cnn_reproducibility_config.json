@@ -1,0 +1,31 @@
+{
+    "project": "Comparative Analysis of Deep Learning Architectures for Multi-Class Brain Tumour MRI Classification",
+    "member": 1,
+    "architecture": "Custom CNN",
+    "selected_experiment": "CNN_A",
+    "dataset": "masoudnickparvar/brain-tumor-mri-dataset/versions/1",
+    "dataset_fingerprint": "061cbffb7341abf85e57a4f99de571e8fa4702ec8236c929e35543ab0547217d",
+    "split_checksums": {
+        "train.csv": "7273ef5fc2cb605c5b03b22a23cda0cb383ac0d9ce5949ac3c95649b5a4270cb",
+        "val.csv": "37b24456cfcd1b69df939e36603958eae6a9124b794c32c83a532b9018c6c88f",
+        "test.csv": "9afc40a38949eb4f46f8c9591d3b1f51cdd11aa991bfe2cf1d15c386c5537d39"
+    },
+    "train_samples": 4353,
+    "validation_samples": 1089,
+    "test_samples": 1311,
+    "seed": 42,
+    "image_size": [
+        224,
+        224,
+        3
+    ],
+    "class_mapping": {
+        "glioma": 0,
+        "meningioma": 1,
+        "notumor": 2,
+        "pituitary": 3
+    },
+    "test_used_only_after_model_selection": true,
+    "post_test_model_tuning_performed": false,
+    "patient_level_independence_verified": false
+}

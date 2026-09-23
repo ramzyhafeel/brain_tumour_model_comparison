@@ -1,0 +1,33 @@
+{
+    "selected_experiment": "CNN_A",
+    "selection_primary_metric": "minimum validation loss",
+    "selection_secondary_metric": "validation macro F1",
+    "test_set_used_for_selection": false,
+    "experiment_results": {
+        "model": "Custom CNN",
+        "experiment_id": "CNN_A",
+        "description": "Baseline: Flatten + Dense256 + Dropout 0.30",
+        "dropout": 0.3,
+        "global_average_pooling": false,
+        "image_size": "224x224",
+        "batch_size": 16,
+        "optimizer": "Adam",
+        "learning_rate": 0.001,
+        "max_epochs": 20,
+        "actual_epochs": 20,
+        "best_epoch": 16,
+        "train_loss_at_best_epoch": 0.11247526854276657,
+        "best_val_loss": 0.12576526403427124,
+        "train_accuracy_at_best_epoch": 0.960716724395752,
+        "best_val_accuracy": 0.966023862361908,
+        "validation_accuracy": 0.9660238751147842,
+        "validation_macro_precision": 0.9655592365419832,
+        "validation_macro_recall": 0.9655960352589567,
+        "validation_macro_f1": 0.9654849704793058,
+        "accuracy_generalization_gap": -0.005307137966156006,
+        "training_time_seconds": 331.9568198119996,
+        "total_parameters": 1438276,
+        "trainable_parameters": 1438276,
+        "seed": 42
+    }
+}

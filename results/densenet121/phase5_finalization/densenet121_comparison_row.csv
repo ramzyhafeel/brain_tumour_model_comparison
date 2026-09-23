@@ -1,0 +1,2 @@
+model,experiment_id,image_size,batch_size,optimizer,learning_rate,max_epochs,actual_epochs,best_epoch,best_val_accuracy,test_accuracy,macro_precision,macro_recall,macro_f1,roc_auc_macro,training_time_seconds,inference_time,inference_time_unit,total_parameters,trainable_parameters,model_size_mb,seed,gpu,dataset_version,test_samples,patient_level_independence_verified
+DenseNet121,DenseNet121_C,224x224x3,16,Adam,1e-05,20,17,13,0.9789,0.9725,0.9721,0.9719,0.972,0.9984,456.8,2.88,milliseconds_per_image,7300932,427268,29.54,42,Tesla T4,1,1311,False

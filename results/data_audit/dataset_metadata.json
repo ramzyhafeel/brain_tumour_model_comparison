@@ -1,0 +1,27 @@
+{
+    "dataset_name": "Brain Tumor MRI Dataset",
+    "creator_from_kaggle_handle": "masoudnickparvar",
+    "kaggle_handle": "masoudnickparvar/brain-tumor-mri-dataset",
+    "observed_dataset_version": 1,
+    "pinned_dataset_handle": "masoudnickparvar/brain-tumor-mri-dataset/versions/1",
+    "resolved_dataset_path": "/kaggle/input/brain-tumor-mri-dataset",
+    "dataset_url": "https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset",
+    "classes": [
+        "glioma",
+        "meningioma",
+        "notumor",
+        "pituitary"
+    ],
+    "number_of_classes": 4,
+    "valid_image_count": 7023,
+    "corrupt_image_count": 0,
+    "original_training_count": 5712,
+    "original_testing_count": 1311,
+    "dataset_image_fingerprint_sha256": "061cbffb7341abf85e57a4f99de571e8fa4702ec8236c929e35543ab0547217d",
+    "exact_cross_split_duplicate_hash_count": 79,
+    "perceptual_cross_split_hash_collision_count": 349,
+    "patient_level_separation_verified": false,
+    "patient_level_note": "Reliable patient identifiers have not been established from the available directory/file structure. Patient-level separation must therefore not be claimed.",
+    "license": null,
+    "license_note": "Verify and record the licence shown on the Kaggle dataset page before final report submission."
+}

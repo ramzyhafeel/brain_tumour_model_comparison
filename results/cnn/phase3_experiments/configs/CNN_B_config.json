@@ -1,0 +1,23 @@
+{
+    "experiment_id": "CNN_B",
+    "description": "Controlled dropout experiment: Dropout 0.50",
+    "dataset_version": 1,
+    "seed": 42,
+    "image_size": [
+        224,
+        224,
+        3
+    ],
+    "batch_size": 16,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "loss": "SparseCategoricalCrossentropy",
+    "max_epochs": 20,
+    "early_stopping_patience": 4,
+    "early_stopping_monitor": "val_loss",
+    "dropout": 0.5,
+    "global_average_pooling": false,
+    "test_set_used": false,
+    "total_parameters": 1438276,
+    "trainable_parameters": 1438276
+}

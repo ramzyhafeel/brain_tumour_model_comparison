@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local datasets
+data/
+dataset/
+Training/
+Testing/
+brain-tumor-mri-dataset/
+
+# Model checkpoints
+*.keras
+*.h5
+*.hdf5
+
+# Colab / local temporary files
+*.zip
+.DS_Store

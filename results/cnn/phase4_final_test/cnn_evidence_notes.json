@@ -1,0 +1,10 @@
+{
+    "lowest_test_f1_class": "meningioma",
+    "highest_test_f1_class": "pituitary",
+    "most_common_error_pair": "meningioma -> notumor (15 cases)",
+    "validation_test_accuracy_gap": 0.012553229257407539,
+    "misclassified_images": 61,
+    "dataset_limitation": "Patient-level independence cannot be verified from available identifiers.",
+    "leakage_control": "Exact duplicate overlap was audited before frozen splits were created.",
+    "interpretation_warning": "Performance on this dataset does not establish performance on unseen patients, scanners, hospitals or clinical populations."
+}

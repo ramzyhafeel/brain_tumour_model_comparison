@@ -1,0 +1,21 @@
+{
+    "member": 1,
+    "phase": 1,
+    "dataset_handle": "masoudnickparvar/brain-tumor-mri-dataset",
+    "dataset_version": 1,
+    "pinned_dataset_handle": "masoudnickparvar/brain-tumor-mri-dataset/versions/1",
+    "dataset_fingerprint": "061cbffb7341abf85e57a4f99de571e8fa4702ec8236c929e35543ab0547217d",
+    "seed": 42,
+    "original_training_valid_images": 5712,
+    "original_testing_valid_images": 1311,
+    "excluded_corrupt_images": 0,
+    "excluded_internal_training_duplicates": 191,
+    "excluded_training_test_exact_overlaps": 79,
+    "frozen_train_count": 4353,
+    "frozen_validation_count": 1089,
+    "frozen_test_count": 1311,
+    "validation_fraction": 0.2,
+    "split_method": "sklearn train_test_split with stratification",
+    "test_policy": "Original Testing directory kept as held-out final test set",
+    "patient_level_split_verified": false
+}

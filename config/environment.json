@@ -1,0 +1,16 @@
+{
+    "python_version": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+    "tensorflow_version": "2.20.0",
+    "keras_version": "3.13.2",
+    "numpy_version": "2.1.3",
+    "pandas_version": "2.2.3",
+    "scikit_learn_version": "1.6.1",
+    "kagglehub_version": "1.0.2",
+    "pillow_version": "11.3.0",
+    "imagehash_version": "4.3.2",
+    "gpu_name": "Tesla T4",
+    "nvidia_smi": "Tesla T4, 580.82.07, 15360 MiB",
+    "seed": 42,
+    "determinism_status": "TensorFlow op determinism enabled"
+}

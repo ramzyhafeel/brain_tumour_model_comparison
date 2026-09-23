@@ -1,0 +1,11 @@
+{
+    "01_custom_cnn.ipynb": "b6e454ae981b4dab3a4f3aaf817370fe324417925f989ed3264f2b1fbb072cc4",
+    "train.csv": "7273ef5fc2cb605c5b03b22a23cda0cb383ac0d9ce5949ac3c95649b5a4270cb",
+    "val.csv": "37b24456cfcd1b69df939e36603958eae6a9124b794c32c83a532b9018c6c88f",
+    "test.csv": "9afc40a38949eb4f46f8c9591d3b1f51cdd11aa991bfe2cf1d15c386c5537d39",
+    "custom_cnn_final.keras": "a63268648fefa6dfa3de9fe74acd9626f056f22ef49f841efd524fa64fde1ede",
+    "cnn_final_metrics.csv": "8fb41eb3b8b365c014bb3759f4238a0458a2dc44d380c68758c8bce9671c3d71",
+    "cnn_test_predictions.csv": "837c53f13d30a7573d3de694819f7c83ee266c89fd6c605b0625f834d84bd2cf",
+    "cnn_comparison_row.csv": "8a3015dd078ad1cc19b6cc3dacd59db50bb145c87dda42e24f44aab056440e88",
+    "MODEL_CARD.md": "e0f07cd5afa0f5c7956338cfe3a6923b3cf29e25a31306343aa37014983f0e65"
+}
